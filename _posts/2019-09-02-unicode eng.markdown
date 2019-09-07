@@ -57,24 +57,24 @@ All this “worked”, but in order to read a letter from Japan, for example, yo
 But the era of the world wide web was approaching, and this carried a number of problems that required a concise and universal solution.
 Let's formulate these problems:
 1. *Versatility.*
-The standard must have included many alphabets and symbols adopted in different countries of the world. And due to the many encoded characters there is a problem number 2.
+The standard must have included many alphabets and symbols adopted in different countries of the world. And due to the many encoded characters there is a problem number 2;
 2. *Storage.*
-To encode a large number of letters and characters, the code space must be large.
+To encode a large number of letters and characters, the code space must be large;
 3. *Compatibility.*
-The new standard should support the old ASCII coding, while not only supporting, but coding identically, for legacy systems to work.
+The new standard should support the old ASCII coding, while not only supporting, but coding identically, for legacy systems to work;
 4. *Zeros.*
 The encoded character should not have 8 zeros in a row, this is due to the fact that numerous outdated systems perceived this as the end of the transmission and stopped the further process of reading data. For them, the line ended.
 
 The solution to the problems was the standard proposed by the non-profit organization Unicode Consortium.
 Their UTF-8 encoding solved all these problems.
 
-1. The range `0 - 007F` has been allocated for legacy ASCII
-2. The range above `007F` is a specific sequence of bytes
+1. The range `0 - 007F` has been allocated for legacy ASCII;
+2. The range above `007F` is a specific sequence of bytes;
 3. At the beginning there is always a counter indicating the number of bytes in the encoded character, the counter starts with units:
-`110x xxxx` - two units indicate 2 bytes in the sequence (including itself), the second byte begins with` 10xx xxxx`, where 10 indicates the continuation of the encoded character
+`110x xxxx` - two units indicate 2 bytes in the sequence (including itself), the second byte begins with` 10xx xxxx`, where 10 indicates the continuation of the encoded character;
 4. If the value is encoded with 3 bytes, then it will look like this:
- `1110 xxxx`` 10xx xxxx`` 10xx xxxx`
-5. Such a unique and, at the same time, simple idea solved the problem of zeros in a string, there simply cannot be 8 in a row.
+ `1110 xxxx`` 10xx xxxx`` 10xx xxxx`;
+5. Such a unique and, at the same time, simple idea solved the problem of zeros in a string, there simply cannot be 8 in a row;
 6. More than one million possible encoded characters (!).
 
 Unicode can be compared with the legend of the construction of the Tower of Babel, only if God made people speak different languages, unicode, on the contrary, combines different languages into one universal.
@@ -94,25 +94,25 @@ The word from this will not change, but *the order of storage of bytes* in Unico
 ---
 Now that it has become clearer to us what the UTF-8 encoding is, it will not be difficult to understand the UTF-16 encoding. UTF-8 is named because it uses at least eight bits (one byte) to store the encoded character.
 Accordingly, UTF-16 uses a minimum of sixteen bits (or two bytes) to store the encoded character. This increases the memory for storing and transmitting data, but UTF-16 has its own number of advantages:
-* Use a language (alphabet) that cannot fit in 1 byte - select UTF-16.
-* Java, JavaScript are based on UTF-16
+* Use a language (alphabet) that cannot fit in 1 byte - select UTF-16;
+* Java, JavaScript are based on UTF-16;
 * The internal format of Windows libraries is also based on UTF-16, which makes compatibility with Windows systems better.
 
 Along with the advantages, the UTF-16 encoding has its drawbacks:
-* Larger size for data storage
-* Many null bytes in the range `0 - 007F`
-* Worst Unix compatibility compared to UTF-8
-* Ability to change the byte order of UTF-16LE (little endian) and UTF-16BE (big endian)
+* Larger size for data storage;
+* Many null bytes in the range `0 - 007F`;
+* Worst Unix compatibility compared to UTF-8;
+* Ability to change the byte order of UTF-16LE (little endian) and UTF-16BE (big endian).
 
 Advantages of UTF-8:
-* No null bytes
-* It performs better for text storage and in working with network protocols.
-* Excellent compatibility with ASCII encoding and, as a result, less data when using English.
-* No byte order dependency
+* No null bytes;
+* It performs better for text storage and in working with network protocols;
+* Excellent compatibility with ASCII encoding and, as a result, less data when using English;
+* No byte order dependency;
 * Good Unix compatibility.
 
 UTF-8 disadvantages:
-* Takes up more space than UTF-16 in languages that use 2 bytes for storage
+* Takes up more space than UTF-16 in languages that use 2 bytes for storage;
 * Slower in-memory indexing compared to UTF-16.
 
 However, you should always consider the environment in which you work and use the encoding recommended for it.

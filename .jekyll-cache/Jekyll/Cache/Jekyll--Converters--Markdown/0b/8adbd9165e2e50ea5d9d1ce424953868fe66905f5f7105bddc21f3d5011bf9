@@ -1,0 +1,35 @@
+I"�<h2 id="what-are-unicode-and-encodings">What are Unicode and encodings?</h2>
+<hr />
+<p>Many programmers, as well as people who have one or another attitude to working with a computer, don’t understand what Unicode, encodings means, which, doesn’t prevent them from using (and sometimes not so) successfully.
+We will try to understand these concepts as simply as possible and find out how Unicode works.</p>
+
+<p>In fact, every person in the modern world interacting with the Internet constantly uses the product of the intellectual work of the three brilliant founders of the Unicode standard. Already in 1987, work began on the creation of Unicode architecture using three people: Lee Collins, Joe Becker and Mark Davis.</p>
+
+<p><img src="/hagura/images/davis-collins.jpg" alt="sample post" /></p>
+
+<center> Pictured (left to right): Mark Davis and Lee Collins celebrate the twenty-fifth anniversary of the Unicode Consortium in 2016. </center>
+
+<p>So what did these three people give us, and why did Unicode become so popular?</p>
+
+<p>Unicode is a generally accepted worldwide coding standard, from alphabet letters to mathematical symbols.
+The question arises, why should symbols, letters, emoticons, signs be encoded, can they really not be used as is?
+The computer only accepts bits and bytes, for it there are no letters or punctuation marks in the form in which we are accustomed to perceive them. Therefore, we see the letter or symbol in the e-mail or program in decrypted form, they are transmitted and stored in encoded form.
+Encoding is a way of storing the information you want to convey.
+For example, the English letter <code class="highlighter-rouge">A</code>, is transmitted as <code class="highlighter-rouge">0100 0001</code>. This letter weighs exactly one byte and consists, as you see, of 8 bits.
+But most often we see encoded letters in the hexadecimal notation (HEX), where alphabetic values are used, in addition to numbers:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 1 2 3 4 5 6 7 8 9 A B C D E F
+</code></pre></div></div>
+
+<p>Let’s try to encode the word <code class="highlighter-rouge">“Documentat.io”</code> in ASCII encoding using the table:</p>
+
+<p><img src="/hagura/images/askii.jpg" alt="sample post" /></p>
+
+<p>Our word will look like:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>44 6F 63 75 6D 65 6E 74 61 74 2E 69 6F
+</code></pre></div></div>
+<p>When the computer reads the information, that you want to transfer, it must understand what encoding you used, otherwise you will encounter the fact that you will see characters that aren’t translated into a normal language, the so-called “mojibake”.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ЊСЃСЏ. R’РѕС ‚СЃРєРѕР» СЊРєРѕ РѕРЅР
+</code></pre></div></div>
+<p>Surely you have met such symbols more than once.</p>
+:ET

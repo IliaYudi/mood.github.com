@@ -33,7 +33,8 @@ But most often we see encoded letters in the hexadecimal notation (HEX), where a
 
 Let's try to encode the word ```Documentat.io``` in ASCII encoding using the table:
 
-![sample post]({{site.baseurl}}/images/askii.JPG)
+
+![sample post]({{site.baseurl}}/images/davis-collins.jpg)
 
 
 Our word will look like:

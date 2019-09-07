@@ -46,7 +46,7 @@ When the computer reads the information, that you want to transfer, it must unde
 ЊСЃСЏ. R’РѕС ‚СЃРєРѕР» СЊРєРѕ РѕРЅР
 ```
 Surely you have met such symbols more than once.
-Surely you have met such symbols more than once.
+
 ## Several problems and one solution.
 ---
 In those days when there was no Internet, different countries came up with their own encodings. For many systems and computers in Western countries, the ASCII "American Standard Code for Information Interchange" encoding was widely used. In the days before Unicode it was the standard. Japan, the USSR and other countries developed their own unique encodings. That is why there is a great variety of them now.
